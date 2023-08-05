@@ -4,11 +4,8 @@ import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
 
-<<<<<<< HEAD
 const LS_KEY = 'phonebook_contacts';
 
-=======
->>>>>>> 56e649984b8f938af6e921e5c036e3c3bd703132
 export class App extends Component {
   state = {
     contacts: [
@@ -20,7 +17,6 @@ export class App extends Component {
     filter: '',
   };
 
-<<<<<<< HEAD
   componentDidMount() {
     const savedContacts = localStorage.getItem(LS_KEY);
     if (savedContacts) {
@@ -38,12 +34,6 @@ export class App extends Component {
     const newContact = {
       id: nanoid(),
       ...data,
-=======
-  formSubmitHandler = data => {
-    const newContact = {
-      ...data,
-      id: nanoid(),
->>>>>>> 56e649984b8f938af6e921e5c036e3c3bd703132
     };
 
     if (this.state.contacts.find(contact => data.name === contact.name)) {
